@@ -1,2 +1,2 @@
 module.exports.Stores = require('./models/Stores')
-module.exports.ShopifyAHUPV2Worker = require('./models/ShopifyAHUPV2/Worker')
+module.exports.ShopifyV2AHUPWorkers = require('./models/ShopifyV2AHUP/Workers')

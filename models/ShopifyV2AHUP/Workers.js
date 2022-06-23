@@ -47,7 +47,7 @@ const ModelSchema = new Schema({
   store_identifier: { type: String, required: true, index: true },
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
-  name: { type: String, default: 'Untitled Worker', required: true },
+  name: { type: String, required: true },
   timezone: { type: String, required: true },
   hider: commonSchema,
   publisher: commonSchema,

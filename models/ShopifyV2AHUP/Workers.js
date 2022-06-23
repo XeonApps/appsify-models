@@ -53,6 +53,7 @@ const ModelSchema = new Schema({
   publisher: commonSchema,
   productsSelection: {
     type: { type: String, enum: ['filters', 'manual'], required: true },
+    hasAtLeastOneProduct: { type: Boolean, default: false },
     manual: {
       selectedProducts: { type: Array }
     },

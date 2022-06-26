@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const commonSchema = new Schema({
   compare_rule: {
-    type: { type: String, enum: ['variant_stock', 'sum_stock_threshold', 'filters'], required: true },
+    type: { type: String, enum: ['no_action', 'variant_stock', 'sum_stock_threshold', 'filters'], required: true },
     stock_threshold: {
       location_ids: { type: Array },
       threshold_value: { type: Number }
@@ -47,6 +47,7 @@ const ModelSchema = new Schema({
   store_identifier: { type: String, required: true, index: true },
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
+  enabled: { type: Boolean, default: false },
   name: { type: String, required: true },
   timezone: { type: String, required: true },
   hider: commonSchema,

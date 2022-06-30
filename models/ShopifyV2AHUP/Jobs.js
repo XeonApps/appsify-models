@@ -7,11 +7,13 @@ const ModelSchema = new Schema({
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
   status: { type: String, enum: ['in_progress', 'completed', 'cancel_in_progress', 'cancelled', 'reverse_in_progres', 'reversed'], required: true },
+  completed_at: { type: Date, default: Date.now },
   actionType: { type: String, enum: ['hider', 'publisher'], required: true },
   frequencyType: { type: String, enum: ['manual', 'scheduled', 'instant', 'after_time', 'date_time'] },
   channelType: { type: String, enum: ['online_store', 'status'] },
   iterationCount: { type: Number, default: 0 },
-  completed_at: { type: Date, default: Date.now }
+  transactionsCount: { type: Number, default: 0 },
+  firstTransaction: Schema.Types.Mixed
 })
 
 module.exports = mongoose.model('ShopifyV2AHUPJobs', ModelSchema, 'shopify-v2ahup-jobs')

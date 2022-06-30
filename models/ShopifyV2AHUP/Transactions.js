@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ModelSchema = new Schema({
-  store_identifier: { type: String, required: true },
-  jobId: { type: String, required: true },
+  store_identifier: { type: String, required: true, index: true },
+  jobId: { type: String, required: true, index: true },
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
   product: {

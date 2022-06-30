@@ -6,6 +6,7 @@ const ModelSchema = new Schema({
   jobId: { type: String, required: true, index: true },
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
+  isReversed: { type: Boolean, default: false },
   product: {
     id: { type: String },
     title: { type: String }

@@ -7,7 +7,7 @@ const ModelSchema = new Schema({
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
   status: { type: String, enum: ['in_progress', 'completed', 'cancel_in_progress', 'reverse_in_progres', 'reversed'], required: true },
-  completed_at: { type: Date, default: Date.now },
+  completed_at: { type: Date },
   actionType: { type: String, enum: ['hider', 'publisher'], required: true },
   frequencyType: { type: String, enum: ['manual', 'scheduled', 'instant', 'after_time', 'date_time'] },
   channelType: { type: String, enum: ['online_store', 'status'] },

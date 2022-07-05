@@ -21,7 +21,8 @@ const commonSchema = new Schema({
   channel: {
     type: { type: String, enum: ['online_store', 'status'], required: true },
     status: {
-      value: { type: String, enum: ['ACTIVE', 'ARCHIVED', 'DRAFT'], required: true }
+      value: { type: String, enum: ['ACTIVE', 'ARCHIVED', 'DRAFT'], required: true },
+      enableOnlineOnStatusActive: { type: Boolean, default: false }
     }
   },
   post_actions: {

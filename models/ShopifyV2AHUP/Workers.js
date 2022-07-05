@@ -45,6 +45,7 @@ const commonSchema = new Schema({
       enabled: { type: Boolean, default: false },
       email: {
         to: { type: Array },
+        fromName: { type: String },
         cc: { type: Array },
         bcc: { type: Array },
         replyTo: { type: String },

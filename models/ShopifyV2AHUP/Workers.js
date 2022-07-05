@@ -40,6 +40,18 @@ const commonSchema = new Schema({
         type: { type: String, enum: ['home', 'custom'], required: true },
         custom_page_url: { type: String }
       }
+    },
+    sendEmail: {
+      enabled: { type: Boolean, default: false },
+      email: {
+        to: { type: Array },
+        cc: { type: Array },
+        bcc: { type: Array },
+        replyTo: { type: String },
+        editorType: { type: String, enum: ['wysiwyg', 'html'], default: 'wysiwyg' },
+        subject: { type: String },
+        message: { type: String }
+      }
     }
   }
 })

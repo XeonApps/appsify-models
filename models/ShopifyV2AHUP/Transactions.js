@@ -7,6 +7,7 @@ const ModelSchema = new Schema({
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
   isReversed: { type: Boolean, default: false },
+  isAlsoEnabledOnOnline: { type: Boolean, default: false },
   product: Schema.Types.Mixed
 })
 

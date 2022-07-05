@@ -7,10 +7,7 @@ const ModelSchema = new Schema({
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date },
   isReversed: { type: Boolean, default: false },
-  product: {
-    id: { type: String },
-    title: { type: String }
-  }
+  product: Schema.Types.Mixed
 })
 
 module.exports = mongoose.model('ShopifyV2AHUPTransactions', ModelSchema, 'shopify-v2ahup-transactions')

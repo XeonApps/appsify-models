@@ -22,7 +22,8 @@ const StoresSchema = new Schema({
       app_charge: Schema.Types.Mixed,
       review: {
         link_clicked_count: { type: Number, default: 0 },
-        hasReviewed: { type: Boolean, default: false }
+        hasReviewed: { type: Boolean, default: false },
+        askForReview: { type: Boolean, default: false }
       },
       metadata: Schema.Types.Mixed
     }
